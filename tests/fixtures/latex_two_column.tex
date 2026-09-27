@@ -1,0 +1,33 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{lipsum}
+\title{Sparse Attention Routing for Long Documents}
+\author{A. Author \and B. Author}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study sparse attention routing. Our method reduces memory by 40\% on long inputs while keeping accuracy within 0.5 points.
+\end{abstract}
+\section{Introduction}
+Long documents are expensive to process because attention is quadratic in sequence length. \lipsum[1-2]
+\section{Related Work}
+\lipsum[3]
+\section{Method}
+\subsection{Routing Network}
+The router assigns each token to one of 16 buckets using a learned projection. \lipsum[4]
+\subsection{Training}
+We train the router jointly with the language model for 20k steps. \lipsum[5]
+\section{Experiments}
+On the LRA benchmark our model reaches 61.2 average accuracy compared to 60.7 for the dense baseline. \lipsum[6-7]
+\section{Limitations}
+We only evaluate English text and models below 1B parameters. The router adds training instability at high learning rates.
+\section{Conclusion}
+\lipsum[8]
+\begin{thebibliography}{9}
+\bibitem{a} A. Vaswani et al. Attention is all you need. In NeurIPS, 2017.
+\bibitem{b} I. Beltagy et al. Longformer: The long-document transformer. arXiv 2020.
+\bibitem{c} M. Zaheer et al. Big Bird: Transformers for longer sequences. NeurIPS 2020.
+\end{thebibliography}
+\appendix
+\section{Hyperparameters}
+We use AdamW with learning rate 3e-4. \lipsum[9]
+\end{document}
