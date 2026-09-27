@@ -208,7 +208,7 @@ flowchart TD
 | `condense` | Rewrites a follow-up like "how much latency does it add?" into a standalone question using the last three turns. Skipped on the first question. |
 | `retrieve` | Hybrid search: BM25 and dense vectors, merged with reciprocal rank fusion. |
 | `answer` | Numbered excerpts go to the LLM with rules: cite every claim, answer `NOT_IN_PAPER` if the excerpts don't contain it. |
-| `check_grounding` | Parses the citations. Rejects the answer if it has none, cites an excerpt number that doesn't exist, or leaves more than half its sentences uncited. |
+| `check_grounding` | Parses the citations. Rejects the answer if it has none, cites an excerpt number that doesn't exist, or leaves more than two-thirds its sentences uncited. |
 | `refuse` | Says the paper doesn't cover it and names the closest sections it found. |
 
 ### State
